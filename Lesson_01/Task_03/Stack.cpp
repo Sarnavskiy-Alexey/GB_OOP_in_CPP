@@ -29,7 +29,6 @@ bool Stack::push(int dat)
 
 	arr[stack_size] = dat;
 	stack_size++;
-	std::cout << "Push(" << dat << ")\n";
 
 	return true;
 }
@@ -44,23 +43,15 @@ int Stack::pop()
 
 	int returnable_dat = arr[stack_size - 1];
 	stack_size--;
-	std::cout << "Pop(" << returnable_dat << ")\n";
 	return returnable_dat;
 }
 
 void Stack::print()
 {
-	std::cout << "In stack: ";
-	if (stack_size == 0)
+	std::cout << "( ";
+	for (int i = stack_size - 1; i >= 0; i--)
 	{
-		std::cout << "empty";
+		std::cout << arr[i] << " ";
 	}
-	else
-	{
-		for (int i = stack_size - 1; i >= 0; i--)
-		{
-			std::cout << arr[i] << " ";
-		}
-	}
-	std::cout << std::endl;
+	std::cout << ")" << std::endl;
 }
