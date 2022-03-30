@@ -4,7 +4,7 @@
 Stack::Stack()
 {
 	stack_size = 0;
-	for (int a : arr)
+	for (int &a : arr)
 	{
 		a = 0;
 	}
@@ -13,7 +13,7 @@ Stack::Stack()
 void Stack::reset()
 {
 	stack_size = 0;
-	for (int a : arr)
+	for (int &a : arr)
 	{
 		a = 0;
 	}
